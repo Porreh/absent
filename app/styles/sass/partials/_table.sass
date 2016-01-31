@@ -1,0 +1,79 @@
+page[size="A4"]
+    display: block
+    box-sizing: border-box
+    background: white
+    box-shadow: 0 0 0.5cm rgba(0,0,0,0.5)
+    padding: 0.5cm
+    margin: 0 auto
+    width: 29.7cm
+    height: 21cm
+table
+    display: flex
+    justify-content: center
+    margin: 2mm
+
+td
+    font-family: inherit
+    border: 0.5mm solid black
+    height: 5mm
+    vertical-align: middle
+
+.table
+    font-family: $FONTROBOTOSLAB
+    span
+        h4, p
+            font-family: inherit
+            margin: 2mm
+            text-align: center
+    .master
+        p
+          font-family: inherit
+          margin: $MARGIN0
+          text-align: left
+          text-indent: 2mm
+
+.datarow:hover
+    background-color: #EEE
+
+.tableheader
+    text-align: center
+
+.R31D1, .R1D3, .R1D4, .R1D5
+    font-weight: bold
+
+.R1D4, .R1D5, .R2D1, .R2D2, .R2D3, .R2D4,
+.R2D5, .R2D6, .R2D7, .R2D8
+    font-style: oblique
+
+.result
+    text-align: center
+    width: 2cm
+
+.number
+    text-align: center
+    width: 8mm
+
+.name
+    text-align: left
+    width: 8cm
+    text-indent: 2mm
+
+.total
+    text-align: center
+    width: 2.5cm
+
+.table__close
+    position: fixed
+    top: 35px
+    right: 45px
+    padding: 4px
+    border-radius: 50%
+
+.table__print
+    position: fixed
+    bottom: 35px
+    right: 45px
+    background-color: $ACCENTCOLOR
+    box-shadow: $SHADOW1
+    padding: 16px
+    border-radius: 50%

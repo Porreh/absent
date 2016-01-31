@@ -1,0 +1,96 @@
+.settings__frame
+    justify-content: center
+    position: relative
+    font-family: $FONTROBOTO
+    background-clip: padding-box
+    background-color: white
+    padding: 16px
+    border-radius: 3px
+    width: 500px
+
+.settings__title
+    padding-bottom: 48px
+    border-bottom: $DIVIDER
+    h3
+        font-family: inherit
+        font-size: 20px
+        font-weight: bold
+        color: $SECONDARYCOLOR
+        padding: 8px
+        margin: $MARGIN0
+        line-height: 24px
+
+.settings__practice
+    display: flex
+    align-items: center
+    justify-content: space-between
+    flex-wrap: nowrap
+    color: $BLACKTEXTSECONDARY
+    padding: 8px
+    margin: $MARGIN0
+    border-bottom: $DIVIDER
+    select
+        box-sizing: border-box
+        font-size: 15px
+        font-weight: 400
+        background-color: #F5F5F5
+        color: $BLACKTEXTSECONDARY
+        padding: 0 16px
+        border: none
+        border-radius: 3px
+        outline: none
+        height: 48px
+
+.settings__practice__title
+    display: inline-block
+
+.settings__table
+    padding: 8px
+    input
+        box-sizing: border-box
+        font-size: 15px
+        font-weight: bold
+        background-color: #F5F5F5
+        color: $BLACKTEXTSECONDARY
+        padding: 0 16px
+        margin: $MARGIN140
+        border: none
+        border-radius: 3px
+        outline: none
+        width: 100%
+        height: 48px
+    input:focus
+        background-color: #E0E0E0
+
+.settings__button__block
+    font-family: $FONTROBOTOCONDENSED
+    padding: 8px
+
+.settings__button__set, .settings__button__cancel
+    display: inline-block
+    font-family: inherit
+    font-size: 16px
+    font-weight: bold
+    background-color: #FFF
+    box-shadow: none
+    color: $SECONDARYCOLOR
+    cursor: pointer
+    padding: 0 8px
+    margin: 0 0 0 8px
+    border: none
+    border-radius: 3px
+    float: right
+    letter-spacing: 0.4px
+    line-height: 36px
+    outline: none
+    text-align: center
+    height: 36px
+    min-width: 54px
+    text-transform: uppercase
+    white-space: nowrap
+
+.settings__button__set:hover, .settings__button__cancel:hover
+    background-color: #F5F5F5
+
+.settings__button__set:active, .settings__button__cancel:active
+    background-color: #E0E0E0
