@@ -248,6 +248,7 @@ let AbsentCounter = (function Counter() {
             AbsentUI.unlock();
             AbsentUI.closesettings();
         }
+
         function logStatus() {
             console.log("READY");
         }
