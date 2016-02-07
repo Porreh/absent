@@ -136,7 +136,7 @@ let AbsentCounter = (function Counter() {
 
         function cleanInputs() {
             for (let inputValue of inputNames) {
-                document.querySelector(inputValue).value = null;
+                document.querySelector(inputValue).value = "";
             }
         }
 
@@ -191,13 +191,18 @@ let AbsentCounter = (function Counter() {
                 blackHole();
             }
 
-            if (medium < nameList.length) {
-                storeValues();
-            } else if (medium === nameList.length) {
-                AbsentCounter.run(zData);
-                parsedValues = [];
-                medium++;
+            function checkCondition() {
+                if (medium < nameList.length) {
+                    storeValues();
+                }
+
+                if (medium === nameList.length) {
+                    AbsentCounter.run(zData);
+                    parsedValues = [];
+                }
             }
+
+            checkCondition();
         }
 
         function clearData() {
@@ -220,7 +225,7 @@ let AbsentCounter = (function Counter() {
         function parseFile(e) {
             const file = e.target.result;
             let names = [],
-                parsedwords = file.split(/\W|\n|\s/).filter(Boolean);
+                parsedwords = file.split(/{Cyrillic}\W|\n|\,|\s/).filter(Boolean);
 
             for (let i = 0; i < parsedwords.length; i += 2) {
                 names.push(`${parsedwords[i]} ${parsedwords[i + 1]}`);
@@ -232,17 +237,17 @@ let AbsentCounter = (function Counter() {
         }
 
         function setSettings() {
-            let g = document.querySelector(".settings__table__group").value,
-                m = document.querySelector(".settings__table__month").value,
-                n = document.querySelector(".settings__table__name").value,
-                x = [g, n, m];
+            const TAG = [".settings__table__group", ".settings__table__name",
+                ".settings__table__month"];
 
-            settings = x;
+            for (let sClass of TAG) {
+                settings.push(document.querySelector(sClass).value);
+            }
+
             AbsentUI.settings();
             AbsentUI.unlock();
             AbsentUI.closesettings();
         }
-
         function logStatus() {
             console.log("READY");
         }

@@ -1,33 +1,31 @@
-%pageelement
+%page
     display: flex
     justify-content: center
+    align-items: center
     position: absolute
     width: 100%
     height: 100%
 
 .intro
-    @extend %pageelement
+    @extend %page
     overflow: hidden
     z-index: 0
 
 .main
-    @extend %pageelement
+    @extend %page
     display: none
     z-index: 1
 
 .settings
-    @extend %pageelement
+    @extend %page
     display: none
-    align-items: center
-    background-color: rgba(0, 0, 0, 0.3)
-    z-index: 3
+    background-color: rgba(0, 0, 0, 0.5)
+    z-index: 2
 
 .table
-    @extend %pageelement
+    @extend %page
     display: none
-    align-items: center
     background-color: $GREY
-    width: 100%
     min-width: 29.7cm
     min-height: 21cm
-    z-index: 4
+    z-index: 3
